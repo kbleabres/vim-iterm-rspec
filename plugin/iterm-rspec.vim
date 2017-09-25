@@ -16,6 +16,7 @@ ruby <<EOF
 
 module ITerm
 
+  require 'pry'
   def self.rspec_line
     rspec(":#{current_line}")
   end
@@ -44,7 +45,7 @@ module ITerm
 
 
   def self.current_file
-    current_buffer.name
+    puts __FILE__
   end
 
   def self.current_line
